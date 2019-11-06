@@ -12,6 +12,7 @@ namespace CSVReaderDataManipulation
             Reader csvreader = new Reader(filepath);
 
             List<Country> countries = csvreader.ReadAllCountries();
+            csvreader.RemoveCommaCountries(countries);
 
             Console.WriteLine("Enter no. of countries to display> ");
             bool inputIsInt = int.TryParse(Console.ReadLine(), out int userInput);
