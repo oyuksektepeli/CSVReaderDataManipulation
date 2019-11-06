@@ -7,7 +7,7 @@ namespace CSVReaderDataManipulation
     {
         static void Main(string[] args)
         {
-            string filepath = @"D:\Repos\CSVReaderDataManipulation\CountryPopulations.csv";
+            string filepath = @"C:\Repos\CSVReaderDataManipulation\CountryPopulations.csv";
 
             Reader csvreader = new Reader(filepath);
 
@@ -34,7 +34,7 @@ namespace CSVReaderDataManipulation
                 }
 
                 Country country = countries[i];
-                Console.WriteLine($"{Formatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
+                Console.WriteLine($"{i+1}: {Formatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
             Console.WriteLine($"{countries.Count} countries");
         }
